@@ -5,6 +5,8 @@
 import { ApiKeyModel } from './api_key.model';
 import { AuditLogModel } from './audit_log.model';
 
+export const CLIENT_STORAGE_DRIVER_SERVICE = 'CLIENT_STORAGE_DRIVER_SERVICE';
+
 export interface ClientStorageDriver {
 
   /**
@@ -13,6 +15,8 @@ export interface ClientStorageDriver {
    */
   fetchByApiKey(apiKey: string): Promise<ApiKeyModel | undefined>;
 }
+
+export const MANAGEMENT_STORAGE_DRIVER_SERVICE = 'MANAGEMENT_STORAGE_DRIVER_SERVICE';
 
 export interface ManagementStorageDriver {
 
